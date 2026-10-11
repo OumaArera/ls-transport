@@ -14,7 +14,11 @@
 export const site = {
   name: 'LS Transport',
   shortName: 'LS Transport',
+  /** Mark only (no strapline) — the strapline is rendered as live text so it
+      stays legible at any size. */
   logo: '/images/logo.png',
+  /** Complete lockup including the strapline, for the favicon and OG image. */
+  logoFull: '/images/logo-full.png',
   url: 'https://www.lstransport.sn',
 } as const;
 

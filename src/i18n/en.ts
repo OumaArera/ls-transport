@@ -18,6 +18,7 @@ export const en = {
     closeMenu: 'Close menu',
     toggleSubmenu: 'Toggle {label} submenu',
     breadcrumb: 'Breadcrumb',
+    showImage: 'Show image {number}',
     home: 'Home',
     mainNav: 'Main',
     mobileNav: 'Mobile',
@@ -454,6 +455,20 @@ export const en = {
         bestFor: ['Small teams', 'NGO field movement', 'Passengers plus equipment'],
         features: ['Convertible seating', 'Cargo area', 'Air conditioning', 'All-day range'],
       },
+      'executive-van': {
+        name: 'Executive Van',
+        imageAlt: 'A black executive van parked outside a modern terminal',
+        capacity: 'Typically 6–8 passengers',
+        summary:
+          'A private cabin on wheels: high-spec seating and room to work or talk, for delegations and VIP groups who want a sedan’s discretion with a minibus’s space.',
+        bestFor: ['VIP groups', 'Delegations and protocol', 'Executive airport transfers'],
+        features: [
+          'Premium seating',
+          'Privacy glass',
+          'Climate control',
+          'Experienced chauffeur',
+        ],
+      },
       'executive-sedan': {
         name: 'Executive Sedan',
         imageAlt: 'A black executive sedan on a city street',
@@ -497,6 +512,14 @@ export const en = {
         ],
       },
     },
+  },
+
+  gallery: {
+    eyebrow: 'The Fleet In Pictures',
+    titleLead: 'Vehicles Worth',
+    titleAccent: 'Arriving In',
+    body: 'Coaches, minibuses, executive vans and freight units — the classes we deploy across Senegal.',
+    scrollLabel: 'Photographs of the LS Transport fleet',
   },
 
   company: {
@@ -697,10 +720,10 @@ export const en = {
         role: 'Chief Strategy Officer',
         focus: 'Long-term planning · Market positioning · Expansion',
         bio: [
-          'Nixon Kwaku Duah Jr serves as the Chief Strategy Officer of LS Transport in Senegal, where he leads the company’s long-term strategic planning, market positioning, and expansion initiatives. With a strong background in development management, corporate finance, and business growth across the United States, Senegal, and The Gambia, Nixon brings a forward-thinking and analytical approach to shaping LS Transport’s future.',
-          'As CSO, Nixon oversees strategic partnerships, competitive analysis, and organisational development, ensuring LS Transport remains aligned with national mobility needs and emerging market opportunities. His work strengthens the company’s ability to scale operations, diversify services, and maintain a strong presence within Senegal’s evolving transport and logistics sector.',
-          'Nixon’s professional experience spans multiple industries, including Adult Family Home operations in Washington State, fire safety services through Sound Fire & Safety LLC, and clean-energy and EV infrastructure development in The Gambia. This multi-sector exposure allows him to integrate global best practices into LS Transport’s strategic roadmap.',
-          'Known for his disciplined execution, strategic insight, and commitment to sustainable growth, Nixon plays a key role in driving LS Transport’s long-term vision. His leadership supports the company’s mission to deliver safe, reliable, and modern transport solutions across Senegal.',
+          'Kwaku Duah Jr serves as the Chief Strategy Officer of LS Transport in Senegal, where he leads the company’s long-term strategic planning, market positioning, and expansion initiatives. With a strong background in development management, corporate finance, and business growth across the United States, Senegal, and The Gambia, Kwaku brings a forward-thinking and analytical approach to shaping LS Transport’s future.',
+          'As CSO, Kwaku oversees strategic partnerships, competitive analysis, and organisational development, ensuring LS Transport remains aligned with national mobility needs and emerging market opportunities. His work strengthens the company’s ability to scale operations, diversify services, and maintain a strong presence within Senegal’s evolving transport and logistics sector.',
+          'Kwaku’s professional experience spans multiple industries, including Adult Family Home operations in Washington State, fire safety services through Sound Fire & Safety LLC, and clean-energy and EV infrastructure development in The Gambia. This multi-sector exposure allows him to integrate global best practices into LS Transport’s strategic roadmap.',
+          'Known for his disciplined execution, strategic insight, and commitment to sustainable growth, Kwaku plays a key role in driving LS Transport’s long-term vision. His leadership supports the company’s mission to deliver safe, reliable, and modern transport solutions across Senegal.',
         ],
       },
     },

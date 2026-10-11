@@ -20,7 +20,7 @@ export function Footer() {
         <div className="grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:py-16">
           <div>
             <Link to="/" className="inline-block rounded-sm bg-white p-3">
-              <img src={site.logo} alt={site.name} className="h-14 w-auto" width={900} height={555} />
+              <img src={site.logo} alt={site.name} className="h-12 w-auto" width={520} height={287} />
             </Link>
             <p className="mt-5 text-sm leading-relaxed">{t.site.footerBlurb}</p>
             <div className="mt-5 inline-flex items-center gap-2 rounded-sm border border-ink-800 bg-ink-900/70 px-3 py-2 text-xs font-semibold text-ink-200">

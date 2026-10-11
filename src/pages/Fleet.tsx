@@ -6,6 +6,7 @@ import { Accent, SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
 import { Button } from '@/components/ui/Button';
 import { CtaBand } from '@/components/sections/CtaBand';
+import { VehicleGallery } from '@/components/sections/VehicleGallery';
 import { useContent, useT } from '@/i18n';
 import { fleetCategories } from '@/data/fleet';
 import { cn } from '@/lib/cn';
@@ -163,6 +164,7 @@ export default function Fleet() {
         </Container>
       </section>
 
+      <VehicleGallery />
       <CtaBand />
     </>
   );

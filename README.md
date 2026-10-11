@@ -30,7 +30,7 @@ Everything below is flagged with a `TODO` comment at the source.
 | **Email address** | `src/data/site.ts` → `contact.email` | `info@lstransport.sn` is a placeholder built from the company name. |
 | **Public domain** | `src/data/site.ts` → `site.url`, plus `index.html`, `public/sitemap.xml`, `public/robots.txt` | `https://www.lstransport.sn` is assumed. |
 | **Street address** | `src/data/site.ts` → `contact.address` | The document gave only "Dakar, Senegal". Add street and district when known. |
-| **Fleet capacities** | `src/data/fleet.ts` | Vehicle *classes* with typical capacity ranges. Confirm the real models, seat counts, and payloads. |
+| **Fleet capacities** | `src/data/fleet.ts` + `fleet.vehicles` in the dictionaries | Eight vehicle *classes* with typical capacity ranges. Confirm the real models, seat counts, and payloads. |
 | **Photography** | `public/images/` | Licensed stock (see `public/images/CREDITS.md`). Swap in LS Transport's own vehicles and crews when available — the filenames can stay the same. |
 | **French copy** | `src/i18n/fr.ts` | Translated in-house, not by a native Senegalese copywriter. Worth a read-through before launch. |
 
@@ -108,6 +108,14 @@ form composes them into a ready-written message. Nobody retypes what they have
 already told us. See `src/components/home/JourneyPlanner.tsx` and
 `composeJourneyMessage()` in `src/components/sections/ContactForm.tsx`.
 
+**Photography that moves.** Each service card cross-fades through three or four
+photographs (`src/components/ui/ImageCarousel.tsx`), staggered so a row of cards
+does not flip in lockstep, paused on hover and focus, and frozen on the first
+image under `prefers-reduced-motion` — the dots still work, so nothing becomes
+unreachable. The home and fleet pages also carry a continuously scrolling fleet
+strip (`VehicleGallery`), which becomes an ordinary scrollable row when motion is
+reduced.
+
 **The coverage map.** `src/components/sections/NetworkMap.tsx` draws the road
 corridors as an interactive SVG. City markers sit at their real latitude and
 longitude, projected linearly onto the viewBox, so the diagram keeps Senegal's
@@ -129,7 +137,10 @@ client-side routing, so the site deploys to Vercel or Netlify as-is.
 ## Accessibility & performance notes
 
 - Skip link, breadcrumb landmarks, labelled form fields with inline errors, and
-  `aria-*` state on the menu, dropdowns, fleet filter, and language switcher.
+  `aria-*` state on the menu, dropdowns, fleet filter, carousels, and language
+  switcher.
+- The logo's strapline is live text, not part of the bitmap, so it stays crisp
+  and translates with the rest of the site.
 - The second-language tagline is wrapped in its own `lang` attribute so screen
   readers pronounce it correctly.
 - Every entrance animation is disabled under `prefers-reduced-motion`.

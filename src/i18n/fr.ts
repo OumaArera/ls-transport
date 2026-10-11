@@ -17,6 +17,7 @@ export const fr: Dictionary = {
     closeMenu: 'Fermer le menu',
     toggleSubmenu: 'Afficher le sous-menu {label}',
     breadcrumb: 'Fil d’Ariane',
+    showImage: 'Afficher l’image {number}',
     home: 'Accueil',
     mainNav: 'Principale',
     mobileNav: 'Mobile',
@@ -481,6 +482,24 @@ export const fr: Dictionary = {
           'Autonomie sur la journée',
         ],
       },
+      'executive-van': {
+        name: 'Van de direction',
+        imageAlt: 'Un van de direction noir stationné devant un terminal moderne',
+        capacity: 'En général 6 à 8 passagers',
+        summary:
+          'Une cabine privée sur roues : sièges haut de gamme et espace pour travailler ou échanger, pour les délégations et les groupes VIP qui veulent la discrétion d’une berline avec le volume d’un minibus.',
+        bestFor: [
+          'Groupes VIP',
+          'Délégations et protocole',
+          'Transferts aéroport des dirigeants',
+        ],
+        features: [
+          'Sièges haut de gamme',
+          'Vitres teintées',
+          'Climatisation',
+          'Chauffeur expérimenté',
+        ],
+      },
       'executive-sedan': {
         name: 'Berline de direction',
         imageAlt: 'Une berline de direction noire dans une rue de la ville',
@@ -532,6 +551,14 @@ export const fr: Dictionary = {
         ],
       },
     },
+  },
+
+  gallery: {
+    eyebrow: 'La flotte en images',
+    titleLead: 'Des véhicules dans lesquels',
+    titleAccent: 'Il fait bon arriver',
+    body: 'Autocars, minibus, vans de direction et unités de fret — les catégories que nous déployons partout au Sénégal.',
+    scrollLabel: 'Photographies de la flotte LS Transport',
   },
 
   company: {

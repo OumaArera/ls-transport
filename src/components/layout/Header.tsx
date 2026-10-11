@@ -48,6 +48,13 @@ export function Header() {
     return () => window.removeEventListener('keydown', onKey);
   }, []);
 
+  /** "Your Journey. Our Commitment." → two stacked lines, in either language. */
+  const taglineLines = t.site.tagline
+    .split(/\.\s+/)
+    .map((part) => part.replace(/\.$/, '').trim())
+    .filter(Boolean)
+    .map((part) => `${part}.`);
+
   const openMenu = (key: string) => {
     window.clearTimeout(closeTimer.current);
     setOpenDropdown(key);
@@ -69,14 +76,30 @@ export function Header() {
       >
         <Container size="wide">
           <div className="flex h-[4.5rem] items-center justify-between gap-4 lg:h-24">
-            <Link to="/" aria-label={`${site.name} — ${t.common.home}`} className="shrink-0">
+            <Link
+              to="/"
+              aria-label={`${site.name} — ${t.site.tagline}`}
+              className="flex shrink-0 items-center gap-3"
+            >
               <img
                 src={site.logo}
-                alt={`${site.name} — ${t.site.tagline}`}
-                className="h-12 w-auto lg:h-16"
-                width={900}
-                height={555}
+                alt=""
+                className="h-11 w-auto lg:h-14"
+                width={520}
+                height={287}
               />
+              {/* The strapline is set in live type rather than baked into the
+                  logo bitmap, where it was unreadable at this size. */}
+              <span
+                className="hidden border-l border-ink-200 pl-3 font-display text-[10px] font-bold uppercase leading-[1.35] tracking-[0.18em] text-gold-700 sm:block lg:text-[11px]"
+                aria-hidden="true"
+              >
+                {taglineLines.map((line) => (
+                  <span key={line} className="block whitespace-nowrap">
+                    {line}
+                  </span>
+                ))}
+              </span>
             </Link>
 
             {/* Desktop navigation */}

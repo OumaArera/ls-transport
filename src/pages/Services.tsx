@@ -5,6 +5,7 @@ import { PageHero } from '@/components/ui/PageHero';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Reveal } from '@/components/ui/Reveal';
 import { Button } from '@/components/ui/Button';
+import { ImageCarousel } from '@/components/ui/ImageCarousel';
 import { FleetPreview } from '@/components/sections/FleetPreview';
 import { CtaBand } from '@/components/sections/CtaBand';
 import { ContactSection } from '@/components/sections/ContactSection';
@@ -37,14 +38,14 @@ export default function Services() {
                 <article className="grid items-center gap-8 lg:grid-cols-2 lg:gap-14">
                   <div className={index % 2 === 1 ? 'lg:order-2' : undefined}>
                     <div className="relative overflow-hidden rounded-sm">
-                      <img
-                        src={service.image}
+                      <ImageCarousel
+                        images={service.images}
                         alt={service.imageAlt}
-                        className="aspect-[4/3] w-full object-cover"
-                        loading="lazy"
+                        offset={index * 700}
+                        className="aspect-[4/3] w-full"
                       />
                       <span
-                        className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent"
+                        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent"
                         aria-hidden="true"
                       />
                       <span className="absolute bottom-5 left-5 inline-flex size-14 items-center justify-center rounded-sm bg-gold-500 text-ink-950">

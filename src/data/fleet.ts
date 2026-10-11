@@ -38,6 +38,12 @@ export const vehicleBases: VehicleBase[] = [
     image: '/images/fleet/passenger-van.jpg',
   },
   {
+    slug: 'executive-van',
+    category: 'executive',
+    icon: BusFront,
+    image: '/images/fleet/executive-van.jpg',
+  },
+  {
     slug: 'executive-sedan',
     category: 'executive',
     icon: Car,
@@ -52,6 +58,25 @@ export const fleetCategories: ('all' | VehicleCategory)[] = [
   'passenger',
   'executive',
   'cargo',
+];
+
+/**
+ * The scrolling vehicle strip on the home page. Ordinary photographs from the
+ * fleet and service sets — no extra downloads.
+ */
+export const galleryImages = [
+  '/images/services/passenger-1.jpg',
+  '/images/fleet/executive-coach.jpg',
+  '/images/services/cargo-1.jpg',
+  '/images/fleet/minibus.jpg',
+  '/images/gallery/sleeper-coach.jpg',
+  '/images/fleet/executive-van.jpg',
+  '/images/fleet/cargo-truck.jpg',
+  '/images/services/passenger-3.jpg',
+  '/images/gallery/coach-side.jpg',
+  '/images/services/corporate-1.jpg',
+  '/images/fleet/executive-sedan.jpg',
+  '/images/fleet/box-truck.jpg',
 ];
 
 export const fleetStandardImages = [

@@ -45,13 +45,18 @@ export const leaderBases: LeaderBase[] = [
     id: 'abdoulie-lowe',
     name: 'Abdoulie Lowe',
     initials: 'AL',
-    photo: '/images/team/abdoulie-lowe.jpeg',
+    photo: '/images/team/abdi.jpeg',
   },
-  { id: 'haddy-saho', name: 'Haddy Saho', initials: 'HS' },
+  {
+    id: 'haddy-saho',
+    name: 'Haddy Saho',
+    initials: 'HS',
+    photo: '/images/team/haddy-saho.jpeg',
+  },
   {
     id: 'nixon-duah',
-    name: 'Nixon Kwaku Duah Junior',
-    initials: 'ND',
+    name: 'Kwaku Duah Junior',
+    initials: 'KD',
     photo: '/images/team/nixon-duah.jpeg',
   },
 ];

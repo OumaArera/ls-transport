@@ -122,6 +122,26 @@
   animation: ls-drift 7s ease-in-out infinite;
 }
 
+/* Continuous fleet strip — the track is rendered twice, so one full pass of
+   the first copy lands exactly where the second begins. */
+@keyframes ls-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-track {
+  animation: ls-marquee 60s linear infinite;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -130,6 +150,15 @@
   .reveal,
   .reveal.is-visible {
     opacity: 1;
+    animation: none;
+  }
+
+  /* Let the fleet strip be scrolled by hand instead of animating. */
+  .marquee {
+    overflow-x: auto;
+  }
+
+  .marquee-track {
     animation: none;
   }
 

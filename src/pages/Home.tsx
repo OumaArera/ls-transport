@@ -6,6 +6,7 @@ import { FeatureSplit } from '@/components/sections/FeatureSplit';
 import { CoreValues } from '@/components/sections/CoreValues';
 import { NetworkMap } from '@/components/sections/NetworkMap';
 import { FleetPreview } from '@/components/sections/FleetPreview';
+import { VehicleGallery } from '@/components/sections/VehicleGallery';
 import { ReasonsGrid } from '@/components/sections/ReasonsGrid';
 import { LeadershipPreview } from '@/components/sections/LeadershipPreview';
 import { CtaBand } from '@/components/sections/CtaBand';
@@ -53,6 +54,7 @@ export default function Home() {
       <CoreValues />
       <NetworkMap />
       <FleetPreview />
+      <VehicleGallery />
 
       <section className="bg-white py-16 sm:py-20 lg:py-24">
         <Container size="wide">
